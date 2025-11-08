@@ -20,13 +20,15 @@ class Main {
       while (true) {
         try {
           valueToCompute = scanner.nextInt();
-          if (valueToCompute >= 0) {
+          if (valueToCompute >= 0 && valueToCompute < 20) {
             break;
           } else {
-            System.err.println("You must enter a positive integer.");
+            System.err.print(
+              "You must enter a positive integer less than 20: "
+            );
           }
         } catch (NumberFormatException e) {
-          System.err.println("Error: you must enter an integer: ");
+          System.err.print("Error: you must enter an integer: ");
         }
       }
     }
